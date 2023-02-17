@@ -1,0 +1,93 @@
+:root {
+  --accent: orange;
+  --text-color: #333;
+  --user-font: roboto-my, sans-serif;
+  --system-font: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "roboto-my";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "roboto-my";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/roboto-italic-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "roboto-my";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-bold-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "roboto-my";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+body {
+  font-family: var(--user-font);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.65;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+input, textarea {
+  outline: none;
+}
+input:focus:required:invalid, textarea:focus:required:invalid {
+  border-color: red;
+}
+input:required:valid, textarea:required:valid {
+  border-color: green;
+}
