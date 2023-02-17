@@ -1,0 +1,120 @@
+.content {
+  will-change: transform;
+}
+
+.main-header {
+  position: relative;
+
+  // граница между экранами
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: calc(var(--index) * 10);
+    background-image: url('../img/ground.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: calc(var(--index) * -4.5);
+  }
+}
+
+.layers {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 2;
+}
+
+.layers__base {
+  z-index: 0;
+}
+
+.layers__middle {
+
+}
+.layers__front {
+
+}
+
+.layer__header {
+  z-index: 1;
+  will-change: transform;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--text);
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 15px #9d822b;
+  }
+  50% {
+    text-shadow: 0 0 30px #9d822b;
+  }
+  100% {
+    text-shadow: 0 0 15px #9d822b;
+  }
+}
+
+.layers__title {
+  font-size: calc(var(--index) * 2.65);
+  letter-spacing: calc(var(--index) / 2.25);
+}
+
+.layers__caption {
+  font-size: calc(var(--index) / 1.175);
+  letter-spacing: calc(var(--index) / 3.5);
+  margin-top: calc(var(--index) * -.75);
+}
+
+.main-article {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  top: -1px;
+  z-index: 10;
+}
+
+.main-article__header {
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 1.8);
+  letter-spacing: calc(var(--index) / 7.5);
+  will-change: transform;
+}
+
+.main-article__paragraph {
+  max-width: calc(var(--index) * 30);
+  font-size: calc(var(--index) * .9);
+  margin-top: calc(var(--index) / 1.25);
+  will-change: transform;
+}
+
+.copy {
+  position: absolute;
+  bottom: calc(var(--index) * 2.5);
+  opacity: .45;
+  font-size: calc(var(--index) * .75);
+  letter-spacing: calc(var(--index) / 37.5);
+}

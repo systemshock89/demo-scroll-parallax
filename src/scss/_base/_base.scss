@@ -1,0 +1,24 @@
+body {
+  font-family: 'raleway-my', 'raleway-my Fallback', sans-serif;
+  line-height: 1.55;
+  background-color: #010101;
+
+  // scrollbar
+  $scrollbarWidth: 5px;
+  $scrollbarBg: transparent;
+  $scrollbarThumb: rgba(90, 90, 90, 0.8);
+  scrollbar-width: $scrollbarWidth;
+  scrollbar-color: $scrollbarThumb $scrollbarBg;
+  &::-webkit-scrollbar {
+    width: $scrollbarWidth;
+  }
+  &::-webkit-scrollbar-track {
+    background: $scrollbarBg;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbarThumb;
+    border-radius: 10px;
+  }
+
+}
+

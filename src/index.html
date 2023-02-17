@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('head.html', {
+    "title": "Scroll parallax",
+    "description": "Scroll parallax"
+    })
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+
+            <header class="main-header">
+                <div class="layers">
+                    <div data-speed=".5" class="layer__header">
+                        <div class="layers__caption">Welcome to Parallax</div>
+                        <div class="layers__title">Fairy Forest</div>
+                    </div>
+                    <div data-speed=".4" class="layer layers__base lazy" data-bg="img/layer-base.webp"></div>
+                    <div data-speed=".6"  class="layer layers__middle lazy" data-bg="img/layer-middle.webp"></div>
+                    <div data-speed=".9" class="layer layers__front lazy" data-bg="img/layer-front.webp"></div>
+                </div>
+            </header>
+
+            <article class="main-article lazy" data-bg="img/dungeon.webp">
+                <div data-speed="1.5" class="main-article__content">
+                    <h2 class="main-article__header">To be continued</h2>
+                    <p class="main-article__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis error provident dignissimos facere. Repellendus tempore autem qui! Quia magnam tempora esse id necessitatibus corrupti mollitia expedita sapiente cum rerum, ut dicta laboriosam!</p>
+                </div>
+                <div class="copy">© 2023</div>
+            </article>
+
+        </div>
+    </div>
+
+    <script src="js/libs/ScrollSmoother.min.js" defer></script>
+    <script src="js/bundle.min.js" defer></script>
+
+</body>
+</html>
